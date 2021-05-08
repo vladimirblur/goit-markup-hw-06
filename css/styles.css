@@ -106,14 +106,16 @@ img {
 }
 
 .close-button {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
-  margin-top: 8px;
   margin-left: auto;
-  margin-right: 8px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -130,18 +132,26 @@ img {
 }
 
 .subscribe-form {
-  padding-top: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  min-width: 528px;
 }
 
 .form-title {
   margin-bottom: 12px;
 
-  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+
   color: var(--title-text-color);
 }
 .form-field {
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+
   width: 448px;
   height: auto;
 }
@@ -167,6 +177,7 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -179,8 +190,14 @@ img {
   left: 12px;
   width: 18px;
   height: 18px;
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.username {
+  width: 12px;
+  height: 12px;
+  top: 14px;
+  left: 15px;
 }
 
 .form-field:focus-within .form-icon {
@@ -195,6 +212,12 @@ img {
 .form-label {
   display: block;
   margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
 }
 
 .form-input.comment {
@@ -212,10 +235,6 @@ img {
 
 .form-field.textarea {
   margin-bottom: 20px;
-}
-
-.form-field {
-  position: relative;
 }
 
 .form-field.agreement {
@@ -274,8 +293,6 @@ img {
 
 .subscribe-form .button-primary {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 55px;
   padding-right: 55px;
 }
